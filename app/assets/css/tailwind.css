@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+.page-wrapper {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #f9a8d4, #f3e8ff);
+  overflow: hidden;
+}
+
+.step-card {
+  @apply w-full text-center rounded-2xl p-6 sm:p-10;
+  max-width: min(92vw, 680px);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.emoji {
+  @apply text-4xl sm:text-5xl mb-4 inline-block;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #ec4899, #f43f5e, #f59e0b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn {
+  @apply text-white font-semibold px-5 py-2.5 rounded-full mt-4 cursor-pointer border-none text-sm sm:text-base;
+  background: linear-gradient(135deg, #ec4899, #f43f5e);
+  box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+  transition: all 0.3s ease;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(236, 72, 153, 0.4); }
+.btn:active { transform: translateY(0); }
+
+.reason-card {
+  @apply bg-white rounded-2xl p-4 transition-all duration-300;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+.reason-card:hover { transform: translateY(-4px); }
+
+/* KEY FIX: mode="out-in" + ini biar tidak overlap */
+.step-enter-active {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.step-leave-active {
+  transition: all 0.3s ease;
+}
+.step-enter-from {
+  opacity: 0;
+  transform: translateY(24px) scale(0.98);
+}
+.step-leave-to {
+  opacity: 0;
+  transform: translateY(-16px) scale(0.98);
+}
