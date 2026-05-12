@@ -31,8 +31,8 @@ A romantic, interactive birthday surprise website built with **Nuxt 4**, **Three
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/for-someone-special.git
-cd for-someone-special
+git clone https://github.com/ikhwan-satrio/birthday-gift.git
+cd birthday-gift
 
 # Install dependencies
 pnpm install
